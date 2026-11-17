@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AgroCore — Gestão das fazendas</title>
+<meta name="description" content="AgroCore: lavoura, estoque, máquinas e financeiro de uma fazenda num lugar só, no computador e no celular. Vídeo de demonstração.">
+<meta property="og:title" content="AgroCore — Gestão das fazendas">
+<meta property="og:description" content="Vídeo de demonstração: lavoura, estoque, máquinas e financeiro num lugar só, no computador e no celular.">
+<meta property="og:image" content="https://thiagotsv.github.io/agrocore-demo/social.jpg">
+<meta property="og:type" content="video.other">
+<meta name="theme-color" content="#123224">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='7' fill='%23f6f2e7'/%3E%3Cg fill='none' stroke='%231f5a3c' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' transform='translate(2.4 2.4) scale(.8)'%3E%3Cpath d='M7 20h10'/%3E%3Cpath d='M10 20c5.5-2.5.8-6.4 3-10'/%3E%3Cpath d='M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z'/%3E%3Cpath d='M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<style>
+  :root { --verde: #123224; --verde2: #1f5a3c; --folha: #8fd19e; --creme: #f6f2e7; --texto: #dce9df; --suave: #a9c4b1; --linha: rgba(246,242,231,.12); }
+  * { box-sizing: border-box; }
+  html { background: var(--verde); }
+  body { margin: 0; font-family: "DM Sans", system-ui, -apple-system, sans-serif; color: var(--texto); line-height: 1.55;
+         background: radial-gradient(1200px 700px at 50% -10%, #22603f 0%, rgba(34,96,63,0) 70%), linear-gradient(180deg, #123224 0%, #0e281c 100%); min-height: 100vh; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  header { padding: 56px 0 28px; text-align: center; }
+  .logo { width: 76px; height: 76px; border-radius: 22px; background: var(--creme); display: inline-grid; place-items: center; box-shadow: 0 20px 50px rgba(0,0,0,.35); }
+  .logo svg { width: 46px; height: 46px; }
+  h1 { margin: 22px 0 6px; font-size: clamp(44px, 7vw, 76px); line-height: 1; letter-spacing: -2px; color: var(--creme); }
+  .tag { margin: 0; font-size: clamp(18px, 2.4vw, 24px); color: var(--suave); }
+  .video { margin: 30px auto 0; border-radius: 18px; overflow: hidden; background: #000; box-shadow: 0 40px 100px rgba(0,0,0,.5), 0 0 0 1px var(--linha); aspect-ratio: 16 / 9; }
+  .video video { width: 100%; height: 100%; display: block; }
+  .legenda { text-align: center; color: var(--suave); font-size: 15px; margin: 14px 0 0; }
+  section { padding: 64px 0 0; }
+  h2 { color: var(--creme); font-size: clamp(26px, 3.4vw, 34px); letter-spacing: -.6px; margin: 0 0 8px; }
+  .intro { color: var(--suave); max-width: 720px; margin: 0 0 28px; font-size: 18px; }
+  .grade { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+  .card { background: rgba(246,242,231,.05); border: 1px solid var(--linha); border-radius: 16px; padding: 20px; }
+  .card b { display: block; color: var(--creme); font-size: 18px; margin-bottom: 4px; }
+  .card span { color: var(--suave); font-size: 15.5px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+  .chip { padding: 8px 14px; border-radius: 999px; border: 1px solid var(--linha); background: rgba(143,209,158,.08); color: var(--texto); font-size: 15px; }
+  footer { padding: 64px 0 48px; color: var(--suave); font-size: 14px; text-align: center; }
+  footer a { color: var(--folha); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#1f5a3c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg></div>
+    <h1>AgroCore</h1>
+    <p class="tag">Lavoura, estoque, máquinas e financeiro da fazenda num lugar só.</p>
+    <div class="video">
+      <video controls playsinline preload="metadata" poster="capa.jpg">
+        <source src="agrocore-demonstracao.mp4" type="video/mp4">
+        Seu navegador não toca vídeo. <a href="agrocore-demonstracao.mp4">Baixe o vídeo</a>.
+      </video>
+    </div>
+    <p class="legenda">Demonstração · 1 min 51 s</p>
+  </header>
+
+  <section>
+    <h2>O que ele faz</h2>
+    <p class="intro">Um sistema feito para o dia a dia de fazendas de verdade: simples para quem está no campo e completo para quem cuida do negócio.</p>
+    <div class="grade">
+      <div class="card"><b>Painel</b><span>O que precisa de atenção hoje: contas que vencem, insumos acabando e o andamento das safras.</span></div>
+      <div class="card"><b>Agenda</b><span>Parcelas, recebimentos e revisões das máquinas no dia, na semana ou no mês.</span></div>
+      <div class="card"><b>Talhões no mapa</b><span>Contornos desenhados sobre a foto de satélite, com a área calculada na hora.</span></div>
+      <div class="card"><b>Safras</b><span>Custo por hectare, produtividade e tudo o que foi aplicado, talhão por talhão.</span></div>
+      <div class="card"><b>No campo, pelo celular</b><span>Aplicação, chuva, colheita e horas de máquina em poucos toques, mesmo sem internet.</span></div>
+      <div class="card"><b>Estoque</b><span>Saldo de cada insumo, com aviso antes de acabar ou passar da validade.</span></div>
+      <div class="card"><b>Financeiro</b><span>Compras, notas, contas a pagar e a receber e o fluxo de caixa semana a semana.</span></div>
+      <div class="card"><b>Máquinas</b><span>Operador, horas trabalhadas, manutenções e custo por hora e por hectare.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Como foi feito</h2>
+    <p class="intro">Aplicação web que funciona no computador e no celular, com o banco protegido por regras de acesso por fazenda.</p>
+    <div class="chips">
+      <span class="chip">Next.js 15</span><span class="chip">React</span><span class="chip">TypeScript</span>
+      <span class="chip">Supabase · PostgreSQL</span><span class="chip">Segurança por linha (RLS)</span>
+      <span class="chip">Modo offline (service worker)</span><span class="chip">Leaflet e imagens de satélite</span>
+      <span class="chip">Tailwind CSS</span><span class="chip">Testes com Playwright</span>
+    </div>
+  </section>
+
+  <footer>
+    O código do AgroCore é privado. Esta página reúne a demonstração.<br>
+    <a href="https://github.com/Thiagotsv">github.com/Thiagotsv</a>
+  </footer>
+</div>
+</body>
+</html>
